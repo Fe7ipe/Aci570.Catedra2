@@ -1,0 +1,16 @@
+<h1>Editar usuario</h1>
+<br><br>
+<?php
+
+echo $this -> Form -> create('User');
+echo $this -> form -> input('id', array('type' => 'hidden'));
+echo $this -> Form -> input('email');
+echo '<div class="input"><label for="UserPassEdit">Password</label>', $this -> Form -> password('passEdit'), '</div>';
+echo $this -> Form -> input('first_name');
+echo $this -> Form -> input('last_name');
+echo $this -> Form -> input('is_active');
+echo $this -> Form -> input('is_admin');
+echo $this -> Form -> end('Guardar usuario');
+?>
+<br><br>
+<p><?php echo $this -> Html -> link('Volver', array('controller' => 'users', 'action' => 'index')); ?></p>
